@@ -20,13 +20,17 @@ public class Livro {
     @Column(name = "autor")
     private String autor;
 
+    @Column(name = "status")
+    private Status status;
+
     public Livro() {
     }
 
-    public Livro(Integer id, String nome, String autor) {
+    public Livro(Integer id, String nome, String autor,Status status) {
         this.id = id;
         this.nome = nome;
         this.autor = autor;
+        this.status = status;
     }
 
     public Integer getId() {
@@ -51,5 +55,13 @@ public class Livro {
 
     public void setAutor(String autor) {
         this.autor = autor;
+    }
+
+    public Status getStatus() {
+        return status;
+    }
+
+    public void setStatus(Status status) {
+        this.status = status;
     }
 }
